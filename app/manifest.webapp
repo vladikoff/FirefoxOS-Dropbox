@@ -1,0 +1,21 @@
+{
+    "version": "1",
+    "name": "Dropbox",
+    "launch_path": "index.html",
+    "description": "Dropbox App",
+    "icons": {
+        "16": "/images/logo16.png",
+        "32": "/images/logo32.png",
+        "48": "/images/logo48.png",
+        "64": "/images/logo64.png",
+        "128": "/images/logo128.png"
+    },
+    "developer": {
+        "name": "",
+        "url": ""
+    },
+    "installs_allowed_from": ["*"],
+    "default_locale": "en",
+    "permissions": {
+    }
+}

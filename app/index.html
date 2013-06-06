@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Firefox OS Dropbox</title>
+</head>
+
+<body>
+<div id="dropbox"></div>
+
+
+<script type="text/javascript" src="dropbox.js"></script>
+
+<script>
+    var client = new Dropbox.Client({
+        // update this key below
+        key: "sioSVxMjPOA=|3aMqSMpwW4+9f1dxmW5ewedzl4tdhGKWgZWtg8l7lw==", sandbox: true
+    });
+
+    // Set auth driver
+    client.authDriver(new Dropbox.Drivers.Popup({
+        rememberUser: true,
+        // update the endpoint below
+        receiverUrl: "http://v14d.com/dropbox.html" })
+    );
+
+    function login() {
+        client.authenticate(function (error, client) {
+            client.getUserInfo(function (error, userInfo) {
+                if (error) {
+                    console.log(error);
+                }
+                console.log("Hello, " + userInfo.name + "!");
+                var d = document.getElementById("dropbox");
+                d.innerHTML = "Hello, " + userInfo.name + "!";
+            });
+        });
+    }
+
+    login();
+</script>
+
+</body>
+</html>
