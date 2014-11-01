@@ -1,4 +1,4 @@
-# FirefoxOS-Dropbox
+# FirefoxOS-Dropbox[DEPRECATED]
 
 An example Firefox OS app that uses [dropbox-js](https://github.com/dropbox/dropbox-js) library.
 
